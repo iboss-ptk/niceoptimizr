@@ -1,0 +1,28 @@
+{
+
+  "manifest_version": 2,
+
+  "name": "niceoptimizr",
+  "version": "1.1.3",
+  "description": "Better experience for niceoppai.com. Block ads, always show all pages, and only press enter for going to the next chapter.",
+  "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+  "content_scripts": [
+    {
+      // Change 'matches' attribute to load content
+      // script only in pages you want to.
+      "run_at": "document_start",
+      "matches": ["http://www.niceoppai.net/*", "https://classdeedee.vwin.co.th/*"],
+      "css": ["base.css"],
+      "js": [
+        "jquery.min.js",
+        "contentscript.js",
+        "bower_components/ddp.js/src/ddp.js",
+        "bower_components/q/q.js",
+        "bower_components/asteroid/dist/asteroid.browser.js",
+        "xss.js"
+      ]
+    }
+  ]
+}
