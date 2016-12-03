@@ -9,8 +9,9 @@ $(document).ready(function() {
   // Trollface image must be at 'my_extension/images/trollface.jpg'.
   console.log(document.location.href.match(/\//ig).length);
 
-  // $('#banner728').css('display','none');
-  // $('.burst_ad_footerboard').css('display','none');
+  $('#banner728').css('display','none');
+  $('.burst_ad_footerboard').css('display','none');
+  $('#geniee_overray_base').css('display','none');
 
   chapterList = $(".cbo_wpm_chp > option");
   
